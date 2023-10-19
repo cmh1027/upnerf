@@ -77,78 +77,6 @@
 			}
 		</script>
 		<script type="text/javascript">
-			var x = 0;
-			var images = [
-				["imgs/ig_barf.png"
-			, "imgs/ig_nerfmm.png",
-			"imgs/ig_scnerf.png",
-			"imgs/ig_ours.png",
-			"imgs/pose_ig.png"], 
-			["imgs/francis_barf.png",
-			"imgs/francis_nerfmm.png",
-			"imgs/francis_scnerf.png",
-			"imgs/francis_ours.png",
-			"imgs/pose_francis.png"],
-			["imgs/museum_barf.png",
-			"imgs/museum_nerfmm.png",
-			"imgs/museum_scnerf.png",
-			"imgs/museum_ours.png",
-			"imgs/pose_museum.png"],
-			["imgs/family_barf.png",
-			"imgs/family_nerfmm.png",
-			"imgs/family_scnerf.png",
-			"imgs/family_ours.png",
-			"imgs/pose_family.png"],
-			["imgs/ballroom_barf.png",
-			"imgs/ballroom_nerfmm.png",
-			"imgs/ballroom_scnerf.png",
-			"imgs/ballroom_ours.png",
-			"imgs/pose_ballroom.png"],
-			["imgs/church_barf.png",
-			"imgs/church_nerfmm.png",
-			"imgs/church_scnerf.png",
-			"imgs/church_ours.png",
-			"imgs/pose_church.png"],
-			["imgs/barn_barf.png",
-			"imgs/barn_nerfmm.png",
-			"imgs/barn_scnerf.png",
-			"imgs/barn_ours.png",
-			"imgs/pose_barn.png"],
-			["imgs/horse_barf.png",
-			"imgs/horse_nerfmm.png",
-			"imgs/horse_scnerf.png",
-			"imgs/horse_ours.png",
-			"imgs/pose_horse.png"],
-			];
-			function ChangeImage() {
-				x = Math.floor(Math.random() * images.length);
-              	document.getElementById("img1").src = images[x];
-			}
-			function displayNextImages() {
-              	x = (x === images.length - 1) ? 0 : x + 1;
-              	document.getElementById("img1").src = images[x][0];
-				document.getElementById("img2").src = images[x][1];
-				document.getElementById("img3").src = images[x][2];
-				document.getElementById("img4").src = images[x][3];
-				document.getElementById("pose").src = images[x][4];
-          }
-
-			function displayPreviousImages() {
-				x = (x <= 0) ? images.length - 1 : x - 1;
-				document.getElementById("img1").src = images[x][0];
-				document.getElementById("img2").src = images[x][1];
-				document.getElementById("img3").src = images[x][2];
-				document.getElementById("img4").src = images[x][3];
-				document.getElementById("pose").src = images[x][4];
-			}
-			function ChangeImages() {
-				x = Math.floor(Math.random() * images.length);
-              	document.getElementById("img1").src = images[x][0];
-				document.getElementById("img2").src = images[x][1];
-				document.getElementById("img3").src = images[x][2];
-				document.getElementById("img4").src = images[x][3];
-				document.getElementById("pose").src = images[x][4];
-			}
 		</script>
 		
 	</head>
@@ -159,8 +87,8 @@
 	<!-- &#x1F6AB &#129306 &#128581 &#128581;&#8205;&#9792;&#65039 &#x1F6AB-->
 	<div class="col text-center">
 	    <p class="authors">
-		  Kim Injae,
-	      Choi Minhyuk,
+		  Injae Kim,
+	      Minhyuk Choi,
 		  <a href="https://pages.cs.wisc.edu/~hwkim/">Hyunwoo J.Kim</a><br>
 	      <a href="https://mlv.korea.ac.kr/home"> MLV Lab</a>,
 	      Korea University<br>
