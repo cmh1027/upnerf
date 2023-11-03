@@ -101,7 +101,28 @@
 		<a class="btn btn-dark" href="https://github.com/K-nowing/UP-NeRF" role="button">Code</a>
 		<!-- <button type="button" class="btn btn-dark" disabled>Code</button> -->
 	</div>
-	<img id="img1" src="imgs/qualitative.png" alt="comparison">
+	<img style="margin-bottom: 30px;" src="imgs/qualitative.png" alt="comparison">
+	<div style="display: inline-block">
+		<div style="float:left; width:25%; padding-top: 20px;">
+			<h5 style="text-align: center;">GT RGB</h5>
+			<img style="display:inline; margin-bottom: 20px;" src="imgs/main_gt.jpg">
+			<h5 style="text-align: center;">GT Feature</h5>
+			<img style="display:inline" src="imgs/main_gt_feature.png">
+		</div>
+		<div style="float:left; margin-left: 30px; width:70%">
+			<div style="display:inline-block; margin-bottom: 15px;">
+				<h5 style="text-align: center;">Visualization of BARF</h5>
+				<video autoplay loop muted width="650px" style="float:left">
+					<source src="video/barf.webm"></source>
+				</video>
+			</div>
+			<div style="display:inline-block;">
+				<h5 style="text-align: center;">Visualization of UP-NeRF</h5>
+				<video autoplay loop muted width="650px" style="float:left">
+					<source src="video/ours.webm"></source>
+				</video>
+			</div>
+		</div>
 	</div>
 	<hr>
 	<h2 class="title is-4">Abstract</h2>
@@ -126,17 +147,31 @@
 		We visualize the progress of pose estimation between one with our candidate head and without it. 
 		<b style="color: #d62728"> Red pyramid </b> represents estimated poses and <b style="color: #000000"> Black pyramid</b> represents ground-truth poses.
 	</p>
-	<div style="padding: 20px 0px;", class="center"></div>
+	<div class="center"></div>
 		<img src="imgs/candidate_ablation.png" alt="Model Overview", class="center">
 	</div>
-	<h4 style="margin:20px">With candidate head</h2>
-	<video autoplay loop muted>
-		<source src="video/candid.webm"></source>
-	</video>
-	<h4 style="margin:20px">Without candidate head</h2>
-		<video autoplay loop muted>
-			<source src="video/nocandid.webm"></source>
-		</video>
+	<div style="display: inline-block; margin-top: 30px; padding-left: 12%;">
+		<div style="float:left; width:25%; padding-top: 60px;">
+			<h5 style="text-align: center;">GT RGB</h5>
+			<img style="display:inline; margin-bottom: 20px;" src="imgs/candidate_gt.jpg">
+			<h5 style="text-align: center;">GT Feature</h5>
+			<img style="display:inline" src="imgs/candidate_gt_feature.png">
+		</div>
+		<div style="float:left; margin-left: 30px; width:70%">
+			<div style="display:inline-block; margin-bottom: 15px;">
+				<h5 style="text-align: center;">Without candidate head</h5>
+				<video autoplay loop muted width="500px" style="float:left">
+					<source src="video/nocandid.webm"></source>
+				</video>
+			</div>
+			<div style="display:inline-block;">
+				<h5 style="text-align: center;">With candidate head</h5>
+				<video autoplay loop muted width="500px" style="float:left">
+					<source src="video/candid.webm"></source>
+				</video>
+			</div>
+		</div>
+	</div>
 	<hr>
 	<h2 class="title is-4",  style="padding: 0px 0px;">Transient-aware depth prior</h2>
 	<p>
