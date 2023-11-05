@@ -73,12 +73,8 @@
 					container: document.querySelectorAll('.b-dics')[7],
 					rotate: '45deg'
 				});
-	
 			}
 		</script>
-		<script type="text/javascript">
-		</script>
-		
 	</head>
 <body>
 
@@ -112,13 +108,13 @@
 		<div style="float:left; margin-left: 30px; width:70%">
 			<div style="display:inline-block; margin-bottom: 15px;">
 				<h5 style="text-align: center;">Visualization of BARF</h5>
-				<video autoplay loop muted width="650px" style="float:left">
+				<video id="video1" autoplay muted width="650px" style="float:left">
 					<source src="video/barf.webm"></source>
 				</video>
 			</div>
 			<div style="display:inline-block;">
 				<h5 style="text-align: center;">Visualization of UP-NeRF</h5>
-				<video autoplay loop muted width="650px" style="float:left">
+				<video id="video2" autoplay muted width="650px" style="float:left">
 					<source src="video/ours.webm"></source>
 				</video>
 			</div>
@@ -160,13 +156,13 @@
 		<div style="float:left; margin-left: 30px; width:70%">
 			<div style="display:inline-block; margin-bottom: 15px;">
 				<h5 style="text-align: center;">Without candidate head</h5>
-				<video autoplay loop muted width="500px" style="float:left">
+				<video id="video3" autoplay muted width="500px" style="float:left">
 					<source src="video/nocandid.webm"></source>
 				</video>
 			</div>
 			<div style="display:inline-block;">
 				<h5 style="text-align: center;">With candidate head</h5>
-				<video autoplay loop muted width="500px" style="float:left">
+				<video id="video4" autoplay muted width="500px" style="float:left">
 					<source src="video/candid.webm"></source>
 				</video>
 			</div>
@@ -190,7 +186,9 @@
 	</div>
 	<hr>
 	<h2 class="title is-4">Full Video</h2>
-	<iframe width="560" height="315" src="https://www.youtube.com/embed/JM0Nk3OKb6s?si=4zevUsPUApJ9a5N-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+	<div style="text-align:center;">
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/JM0Nk3OKb6s?si=4zevUsPUApJ9a5N-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+	</div>
 	<hr>
 	<h2 class="title is-4">BibTeX</h2>
 	<code class="codebox" id="bibtex"><pre>
@@ -202,7 +200,22 @@
 		}
 	
 	</main>
+	<script type="text/javascript">
+		var videos = ["video1", "video2", "video3", "video4"];
+		var listen = (id_)=>{
+			document.getElementById(id_).playbackRate = 0.5;
+			document.getElementById(id_).addEventListener('ended',(e)=>{
+			setTimeout(function(){
+				document.getElementById(id_).play();
+			}, 3000);
+			},false);
+		}
+		for (var i = 0; i < videos.length; i++) {
+			var id_ = videos[i];
+			listen(id_);
+		}
+
+	</script>
 	</body>
-	
 </html>
 
