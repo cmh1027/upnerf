@@ -98,26 +98,28 @@
 		<!-- <button type="button" class="btn btn-dark" disabled>Code</button> -->
 	</div>
 	<img style="margin-bottom: 30px;" src="imgs/qualitative.png" alt="comparison">
-	<div style="display: inline-block">
+	<div style="display: inline-block; padding-left: 10%;">
 		<div style="float:left; width:25%; padding-top: 20px;">
 			<h5 style="text-align: center;">GT RGB</h5>
 			<img style="display:inline; margin-bottom: 20px;" src="imgs/main_gt.jpg">
 			<h5 style="text-align: center;">GT Feature</h5>
 			<img style="display:inline" src="imgs/main_gt_feature.png">
 		</div>
-		<div style="float:left; margin-left: 30px; width:70%">
+		<div style="float:left; width:3%; border-left: 3px solid black;height: 420px; margin-left:30px"></div>
+		<div style="float:left; width:60%; text-align: center; font-size: 13px;">
 			<div style="display:inline-block; margin-bottom: 15px;">
 				<h5 style="text-align: center;">Visualization of BARF</h5>
 				<video id="video1" autoplay muted width="650px" style="float:left">
 					<source src="video/barf.webm"></source>
 				</video>
 			</div>
-			<div style="display:inline-block;">
+			<div style="display:inline-block; margin-bottom: 10px;">
 				<h5 style="text-align: center;">Visualization of UP-NeRF</h5>
 				<video id="video2" autoplay muted width="650px" style="float:left">
 					<source src="video/ours.webm"></source>
 				</video>
 			</div>
+			Colored frustum and black frustum each represents predicted pose and GT pose
 		</div>
 	</div>
 	<hr>
@@ -141,7 +143,7 @@
 	<h3>Candidate head</h3>
 	<p>
 		We visualize the progress of pose estimation between one with our candidate head and without it. 
-		<b style="color: #d62728"> Red pyramid </b> represents estimated poses and <b style="color: #000000"> Black pyramid</b> represents ground-truth poses.
+		<b style="color: #d62728"> Red frustum </b> represents estimated poses and <b style="color: #000000"> Black frustum</b> represents ground-truth poses.
 	</p>
 	<div class="center"></div>
 		<img src="imgs/candidate_ablation.png" alt="Model Overview", class="center">
